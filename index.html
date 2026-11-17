@@ -171,7 +171,8 @@ td{padding:10px 14px;border-bottom:1px solid var(--ln);vertical-align:top}
 <script>
 /* Şifre SHA-256 özeti olarak saklanır. Yeni şifre için tarayıcı konsoluna
    sha("yenisifre").then(console.log) yaz, çıkan değeri aşağıya yapıştır. */
-const HASH="910d164926cbfbf4f08c81c8ca0950fc7784e7e900998825d68e8370572cc271";
+const HASH="910d164926cbfbf4f08c81c8ca0950fc7784e7e900998825d68e8370572cc271
+";
 async function sha(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return Array.from(new Uint8Array(b),x=>x.toString(16).padStart(2,"0")).join("")}
 
 const $=s=>document.querySelector(s),sleep=ms=>new Promise(r=>setTimeout(r,ms));
